@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import requests
+
 url = 'https://github.com/username/repository/raw/main/model_pipeline.joblib'
 response = requests.get(url)
 
