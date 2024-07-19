@@ -4,10 +4,11 @@ import joblib
 url = 'https://github.com/username/repository/raw/main/model_pipeline.joblib'
 response = requests.get(url)
 
-# Save the file locally
 model_path = 'model_pipeline.joblib'
 with open(model_path, 'wb') as f:
-    f.write(response.content)loaded_model = joblib.load(filename)
+    f.write(response.content)
+
+loaded_model = joblib.load(filename)
 
 df = pd.read_csv("recruitment_data.csv")
 
