@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-filename = r'C:\Users\Yash\Desktop\Hiring_ML\model_pipeline.joblib'
+filename = model_pipeline.joblib
 loaded_model = joblib.load(filename)
 
 df = pd.read_csv("recruitment_data.csv")
