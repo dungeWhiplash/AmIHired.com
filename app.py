@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import joblib
-import emoji
 
 filename = r'C:\Users\Yash\Desktop\Hiring_ML\model_pipeline.joblib'
 loaded_model = joblib.load(filename)
