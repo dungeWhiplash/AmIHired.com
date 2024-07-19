@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import joblib
 import requests
-import os
 
 url = 'https://github.com/dungeWhiplash/AmIHired/blob/main/model_pipeline.joblib'
 response = requests.get(url)
