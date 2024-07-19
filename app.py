@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import requests
 
-url = 'https://github.com/dungeWhiplash/AmIHired.com/blob/main/model_pipeline.joblib'
+url = 'https://github.com/dungeWhiplash/AmIHired.com/blob/main/model_pipeline.joblib?raw=true'
 response = requests.get(url)
 
 model_path = 'model_pipeline.joblib'
