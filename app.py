@@ -3,8 +3,7 @@ import pandas as pd
 import joblib
 import requests
 
-model_path = 'model_pipeline.joblib'
-loaded_model = joblib.load(model_path)
+loaded_model = joblib.load('model_pipeline.joblib')
 
 df = pd.read_csv("recruitment_data.csv")
 
