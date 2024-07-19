@@ -10,8 +10,16 @@ model_path = 'model_pipeline.joblib'
 with open(model_path, 'wb') as f:
     f.write(response.content)
 
-loaded_model = joblib.load(model_path)
-
+# Verify that the model file was downloaded correctly
+if not os.path.exists(model_path):
+    st.error("Model file could not be downloaded.")
+else:
+    try:
+        # Load the model
+        loaded_model = joblib.load(model_path)
+    except Exception as e:
+        st.error(f"Error loading the model: {e}")
+        st.stop()
 df = pd.read_csv("recruitment_data.csv")
 
 
