@@ -4,7 +4,7 @@ import joblib
 import requests
 import os
 
-url = 'https://github.com/dungeWhiplash/AmIHired/raw/main/model_pipeline.joblib'
+url = 'https://github.com/dungeWhiplash/AmIHired/blob/main/model_pipeline.joblib'
 response = requests.get(url)
 
 model_path = 'model_pipeline.joblib'
