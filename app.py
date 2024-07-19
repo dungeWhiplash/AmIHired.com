@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-filename = model_pipeline.joblib
+filename = r'model_pipeline.joblib'
 loaded_model = joblib.load(filename)
 
 df = pd.read_csv("recruitment_data.csv")
