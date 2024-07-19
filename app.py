@@ -3,12 +3,7 @@ import pandas as pd
 import joblib
 import requests
 
-url = 'https://github.com/dungeWhiplash/AmIHired.com/blob/main/model_pipeline.joblib'
-response = requests.get(url)
-
-model_path = 'model_pipeline.joblib'
-with open(model_path, 'wb') as f:
-    f.write(response.content)
+model_path = 'model_pipeline.joblib
 loaded_model = joblib.load(model_path)
 
 df = pd.read_csv("recruitment_data.csv")
