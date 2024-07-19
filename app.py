@@ -10,7 +10,7 @@ model_path = 'model_pipeline.joblib'
 with open(model_path, 'wb') as f:
     f.write(response.content)
 
-loaded_model = joblib.load(f)
+loaded_model = joblib.load(model_path)
 
 df = pd.read_csv("recruitment_data.csv")
 
