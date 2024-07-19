@@ -2,11 +2,11 @@
 
 
 ## Model's accuracy:
-### Accuracy: 0.92
-### Precision: 0.8588235294117647
-### F1 Score: 0.8588235294117647
-### Recall: 0.8588235294117647
-### ROC AUC: 0.9286183310533515
+### Accuracy: 0.9266
+### Precision: 0.8620
+### F1 Score: 0.8720
+### Recall: 0.8823
+### ROC AUC: 0.9293
 
 ## Algorithms used: 
 ### a) Logistic Regression
@@ -24,7 +24,7 @@
 
 # We will also try implementing Principal Component Analysis for Dimensionality Reduction to see the impact
 
-## Let's see the feature importance through Random Forest Classifier using SMOTETomek for class imbalances
+## Let's see the feature importance through Random Forest Classifier using SMOTE for class imbalances
 ![image](https://github.com/user-attachments/assets/5341972b-2d87-425a-84fe-d17581adb3c3)
 
 # Steps to run the application:
