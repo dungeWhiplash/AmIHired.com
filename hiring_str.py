@@ -13,8 +13,6 @@ from imblearn.combine import SMOTETomek, SMOTEENN
 from imblearn.under_sampling import RandomUnderSampler
 from sklearn.preprocessing import StandardScaler
 from collections import Counter
-import ImbPipeline
-import ColumnTransformer
 
 df = pd.read_csv('recruitment_data.csv')
 #print(df)
@@ -57,36 +55,3 @@ plt.barh(features, feature_importances, color='skyblue')
 plt.xlabel('Feature Importance')
 plt.title('Feature Importance in Random Forest Classifier')
 plt.show()
-
-preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', StandardScaler(), X.columns)  # Assuming all columns in X are numeric
-    ]
-)
-
-pipeline = ImbPipeline(steps=[
-    ('preprocessor', preprocessor),
-    ('smote', SMOTE(random_state=42)),
-    ('classifier', rfc_model)
-])
-
-# Fit the pipeline
-pipeline.fit(X_train, y_train)
-
-# Save the pipeline
-joblib.dump(pipeline, 'model_pipeline.joblib')
-
-# Predict and evaluate as before
-y_pred = pipeline.predict(X_test)
-y_pred_prob = pipeline.predict_proba(X_test)[:, 1]
-accuracy = accuracy_score(y_test, y_pred)
-precision = precision_score(y_test, y_pred)
-f1 = f1_score(y_test, y_pred)
-recall = recall_score(y_test, y_pred)
-roc_auc = roc_auc_score(y_test, y_pred_prob)
-
-print(f'Accuracy: {accuracy}')
-print(f'Precision: {precision}')
-print(f'F1 Score: {f1}')
-print(f'Recall: {recall}')
-print(f'ROC AUC: {roc_auc}')
