@@ -1,4 +1,4 @@
-# AreYouHired
+# AmIHired.com
 
 
 ## Model's accuracy:
